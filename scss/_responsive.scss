@@ -1,0 +1,95 @@
+// TVs
+@include mediaXl {
+  .menu-btn {
+    display: none;
+  }
+
+  .menu {
+    position: fixed;
+    width: 100vw;
+    height: 104px;
+    background-color: rgba($primary-color, 0);
+    visibility: visible;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 48px;
+    @include ease();
+    // border: 2px solid red;
+
+    &-brand,
+    &-nav {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    &-brand {
+      .img-profile {
+        margin-top: 0;
+        border: 3px solid $third-color;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+    &-nav {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+
+      .nav-item {
+        @include ease;
+        border-radius: 4px;
+        transform: translateX(0px);
+
+        a {
+          padding: 8px 16px;
+          font-size: 14px;
+
+          i {
+            font-size: 0;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    &-hidden {
+      display: inline-block;
+      visibility: hidden;
+    }
+  }
+}
+
+// Tablets
+@include mediaMd {
+  //Menu Overlay
+  .menu {
+    width: 48vw;
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  h1,
+  h2,
+  h3 {
+    &.lg-heading {
+      font-size: 3rem;
+    }
+
+    &.sm-heading {
+      font-size: 1rem;
+    }
+  }
+
+  //Menu Overlay
+  .menu {
+    width: 64vw;
+  }
+}

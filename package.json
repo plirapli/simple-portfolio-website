@@ -1,0 +1,14 @@
+{
+  "name": "simple-portfolio-website",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:dist/css"
+  },
+  "author": "Rafli",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.29.0"
+  }
+}
