@@ -14,7 +14,7 @@ $bg-opacity: 0.9;
 
       &::after {
         content: "";
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         right: 0;
@@ -32,9 +32,18 @@ $bg-opacity: 0.9;
   transition: all 300ms ease;
 }
 
+// Color Auto
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
 //Media Query
 @mixin mediaSm {
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 624px) {
     @content;
   }
 }

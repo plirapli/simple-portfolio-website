@@ -11,7 +11,7 @@
     width: 28px;
     height: 3px;
     margin-bottom: 5px;
-    background-color: white;
+    background-color: set-text-color($primary-color);
 
     &:nth-child(2) {
       width: 20px;
@@ -42,7 +42,6 @@
   position: fixed;
   top: 0;
   width: 30vw;
-  height: 100%;
   background-color: darken($primary-color, 4);
   visibility: hidden;
   transform: translateX(-100%);
@@ -68,7 +67,7 @@
   }
 
   &-brand {
-    // height: 15%;
+    // height: 24vh;
     padding-left: 24px;
 
     .img-profile {
@@ -83,7 +82,7 @@
   }
 
   &-nav {
-    // height: 85%;
+    height: 80vh;
     list-style: none;
     margin-top: 3rem;
 
@@ -98,7 +97,7 @@
 
       a {
         position: relative;
-        padding: 1rem 48px;
+        padding: 1rem 24px 1rem 48px;
         display: block;
         text-transform: capitalize;
         font-weight: 600;
