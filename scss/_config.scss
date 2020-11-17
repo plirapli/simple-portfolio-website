@@ -34,7 +34,7 @@ $bg-opacity: 0.9;
 
 // Color Auto
 @function set-text-color($color) {
-  @if (lightness($color) > 40) {
+  @if (lightness($color) > 50) {
     @return black;
   } @else {
     @return white;

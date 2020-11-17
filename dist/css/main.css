@@ -97,6 +97,7 @@
 }
 
 body {
+  background-color: rgba(31, 81, 82, 0.9);
   color: white;
   height: 100%;
   margin: 0;
@@ -129,7 +130,7 @@ h1.lg-heading,
 h2.lg-heading,
 h3.lg-heading {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
 }
 h1.lg-heading span,
 h2.lg-heading span,
@@ -175,6 +176,82 @@ main#home {
 }
 main#home h1 {
   margin-top: 20vh;
+}
+
+main#portfolio h1 {
+  margin-top: 12vh;
+  margin-bottom: 2rem;
+}
+main#portfolio .portfolio {
+  display: grid;
+  grid-template-areas: "port1 port1 port2 port3" "port1 port1 port4 port5";
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+main#portfolio .portfolio .port {
+  position: relative;
+  overflow: hidden;
+}
+main#portfolio .portfolio .port .hover-item {
+  width: 100%;
+  background-color: #ff9000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 12px;
+  position: absolute;
+  transform: translateY(100%);
+  bottom: 0;
+  color: white;
+  transition: all 300ms ease;
+}
+main#portfolio .portfolio .port .hover-item i {
+  font-size: 1rem;
+}
+main#portfolio .portfolio .port .hover-item i:hover {
+  color: #663a00;
+}
+main#portfolio .portfolio .port .hover-item.main {
+  font-size: 1rem;
+}
+main#portfolio .portfolio .port .hover-item.main i {
+  font-size: 24px;
+}
+main#portfolio .portfolio .port:hover .hover-item {
+  transform: translateY(0);
+}
+main#portfolio .portfolio .port1 {
+  grid-area: port1;
+}
+main#portfolio .portfolio .port2 {
+  grid-area: port2;
+}
+main#portfolio .portfolio .port3 {
+  grid-area: port3;
+}
+main#portfolio .portfolio .port4 {
+  grid-area: port4;
+}
+main#portfolio .portfolio .port5 {
+  grid-area: port5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: #90c3c3;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+main#portfolio .portfolio .port5:hover {
+  background-color: #417979;
+  color: white;
+}
+main#portfolio .portfolio img {
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (min-width: 1025px) {
