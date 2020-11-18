@@ -5,7 +5,7 @@
   }
 
   .menu {
-    position: fixed;
+    position: static;
     width: 100vw;
     background-color: rgba($primary-color, 0);
     visibility: visible;
@@ -89,6 +89,9 @@
   }
 
   // Main
+  main {
+    padding: 36px;
+  }
   main#home h1 {
     margin-top: 12vh;
   }
@@ -96,5 +99,54 @@
   //Menu Overlay
   .menu {
     width: 64vw;
+  }
+
+  // Portfolio Page
+  main#portfolio {
+    .lg-heading {
+      margin-top: 4vh;
+      margin-bottom: 1rem;
+    }
+    .portfolio {
+      grid-template-areas:
+        "port1"
+        "port2"
+        "port3"
+        "port4"
+        "port5";
+
+      grid-template-columns: repeat(1, 1fr);
+
+      .port {
+        overflow: visible;
+        .hover-item {
+          height: 100%;
+          background-color: rgba(darken($third-color, 50), 0.3);
+          opacity: 0;
+          justify-content: center;
+          font-size: 0;
+          transform: translateY(0);
+
+          i {
+            font-size: 48px;
+
+            &:hover {
+              color: darken($third-color, 50);
+            }
+          }
+
+          &.main {
+            font-size: 0;
+            i {
+              font-size: 48px;
+            }
+          }
+        }
+
+        &:hover .hover-item {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
