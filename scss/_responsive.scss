@@ -1,5 +1,6 @@
-// TVs
+// Laptop, Desktop, TVs
 @include mediaXl {
+  // Menu Overlay
   .menu-btn {
     display: none;
   }
@@ -72,10 +73,26 @@
   .menu {
     width: 48vw;
   }
+
+  // Portfolio Page
+  main#portfolio {
+    .lg-heading {
+      margin-top: 8vh;
+    }
+    .portfolio {
+      grid-template-areas:
+        "port1 port2"
+        "port3 port4"
+        "port5 port5";
+
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
 
 // Smartphones
 @include mediaSm {
+  // Initial
   h1,
   h2,
   h3 {
@@ -88,17 +105,19 @@
     }
   }
 
+  //Menu Overlay
+  .menu {
+    width: 64vw;
+  }
+
   // Main
   main {
     padding: 36px;
   }
+
+  // Home Page
   main#home h1 {
     margin-top: 12vh;
-  }
-
-  //Menu Overlay
-  .menu {
-    width: 64vw;
   }
 
   // Portfolio Page
