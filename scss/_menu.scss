@@ -2,8 +2,8 @@
 .menu-btn {
   position: absolute;
   z-index: 4;
-  left: 1.5rem;
-  top: 1.5rem;
+  left: 1rem;
+  top: 1rem;
   cursor: pointer;
   @include ease();
 
@@ -62,18 +62,15 @@
     overflow: hidden;
   }
 
-  &-hidden {
-    display: none;
-  }
-
+  // Profile Image
   &-brand {
     // height: 24vh;
     padding-left: 24px;
 
     .img-profile {
-      margin-top: 5rem;
-      width: 100px;
-      height: 100px;
+      margin-top: 4rem;
+      width: 80px;
+      height: 80px;
       background: url("../img/img-profile.jpg");
       background-size: cover;
       border-radius: 50%;
@@ -81,8 +78,9 @@
     }
   }
 
+  // Nav Menu
   &-nav {
-    height: 80vh;
+    // height: 80vh;
     list-style: none;
     margin-top: 3rem;
 

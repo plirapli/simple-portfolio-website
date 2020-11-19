@@ -50,7 +50,7 @@ header {
 
 main {
   min-height: calc(100vh - 40px);
-  padding: 4rem;
+  padding: 4rem 6rem 8rem;
   height: 100%;
 
   .icon {
@@ -76,71 +76,53 @@ main {
 
 // Portfolio Page
 main#portfolio {
-  h1 {
-    margin-top: 12vh;
-    margin-bottom: 2rem;
+  padding-top: 3rem;
+
+  .lg-heading {
+    margin-bottom: 3rem;
   }
 
   .portfolio {
     display: grid;
     grid-template-areas:
-      "port1 port1 port2 port3"
-      "port1 port1 port4 port5";
+      "port1 port2 port3"
+      "port4 port5 port6";
 
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 
     .port {
       position: relative;
       overflow: hidden;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      border-radius: 12px 12px 8px 8px;
+      background-color: rgba($primary-color, 0.7);
       @include ease;
 
       img {
-        width: 100%;
-        height: 100%;
+        transform: translateY(48px);
+        width: 70%;
         background-size: cover;
-      }
-
-      .hover-item {
-        width: 100%;
-        background-color: $secondary-color;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        font-size: 12px;
-        position: absolute;
-        transform: translateY(100%);
-        bottom: 0;
-        color: set-text-color($secondary-color);
         @include ease;
 
-        i {
-          font-size: 1rem;
-          @include ease;
-
-          &:hover {
-            color: darken($secondary-color, 30);
-          }
+        &:hover {
+          transform: translateY(24px);
         }
+      }
 
-        &.main {
-          font-size: 1rem;
-          i {
-            font-size: 24px;
-          }
-        }
+      .desc-item {
+        z-index: 2;
+        padding: 1rem;
+        width: 100%;
+        background-color: $secondary-color;
+        text-align: center;
       }
 
       &:hover {
         box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-      }
-
-      &:hover .hover-item {
-        transform: translateY(0);
       }
     }
 
@@ -167,6 +149,7 @@ main#portfolio {
       background-color: $third-color;
       text-transform: uppercase;
       color: set-text-color($third-color);
+      border-radius: 12px;
       cursor: pointer;
       @include ease;
 
@@ -178,16 +161,20 @@ main#portfolio {
   }
 }
 
+main#about {
+}
+
 .footer {
-  padding: 8px;
+  padding: 20px 0px;
   font-size: 1rem;
   text-align: center;
   background-color: $secondary-color;
   color: set-text-color($secondary-color);
-  height: 40px;
+  height: 64px;
 
   a {
-    margin-right: 12px;
+    margin-right: 16px;
+    font-size: 20px;
     @include ease;
 
     &:hover {

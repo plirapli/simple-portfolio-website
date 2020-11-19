@@ -1,21 +1,25 @@
 // Laptop, Desktop, TVs
 @include mediaXl {
   // Menu Overlay
+  header {
+    position: static;
+  }
+
   .menu-btn {
     display: none;
   }
 
   .menu {
     position: static;
-    width: 100vw;
-    background-color: rgba($primary-color, 0);
+    width: 100%;
+    background-color: rgba($primary-color, 0.7);
     visibility: visible;
     transform: translateX(0);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 28px 48px;
+    padding: 1rem 6rem;
     @include ease();
     // border: 2px solid red;
 
@@ -32,13 +36,13 @@
       .img-profile {
         margin-top: 0;
         border: 3px solid $third-color;
-        width: 52px;
-        height: 52px;
+        width: 64px;
+        height: 64px;
       }
     }
 
     &-nav {
-      height: 36px;
+      // height: 36px;
       list-style: none;
       display: flex;
       gap: 24px;
@@ -49,7 +53,7 @@
         transform: translateX(0px);
 
         a {
-          padding: 8px 16px;
+          padding: 10px 16px;
           font-size: 14px;
 
           i {
@@ -71,14 +75,16 @@
 @include mediaMd {
   //Menu Overlay
   .menu {
-    width: 48vw;
+    width: 300px;
+  }
+
+  // Main
+  main {
+    padding: 4rem 4rem 6rem;
   }
 
   // Portfolio Page
   main#portfolio {
-    .lg-heading {
-      margin-top: 8vh;
-    }
     .portfolio {
       grid-template-areas:
         "port1 port2"
@@ -86,6 +92,10 @@
         "port5 port5";
 
       grid-template-columns: repeat(2, 1fr);
+
+      .port.port5 {
+        padding: 3rem;
+      }
     }
   }
 }
@@ -107,7 +117,7 @@
 
   //Menu Overlay
   .menu {
-    width: 64vw;
+    width: 60vw;
   }
 
   // Main
@@ -135,37 +145,6 @@
         "port5";
 
       grid-template-columns: repeat(1, 1fr);
-
-      .port {
-        overflow: visible;
-        .hover-item {
-          height: 100%;
-          background-color: rgba(darken($third-color, 50), 0.3);
-          opacity: 0;
-          justify-content: center;
-          font-size: 0;
-          transform: translateY(0);
-
-          i {
-            font-size: 48px;
-
-            &:hover {
-              color: darken($third-color, 50);
-            }
-          }
-
-          &.main {
-            font-size: 0;
-            i {
-              font-size: 48px;
-            }
-          }
-        }
-
-        &:hover .hover-item {
-          opacity: 1;
-        }
-      }
     }
   }
 }
