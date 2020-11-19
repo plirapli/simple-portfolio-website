@@ -105,6 +105,7 @@ main#portfolio {
       img {
         transform: translateY(48px);
         width: 70%;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
         background-size: cover;
         @include ease;
 
@@ -119,6 +120,16 @@ main#portfolio {
         width: 100%;
         background-color: $secondary-color;
         text-align: center;
+
+        a {
+          font-weight: 700;
+          font-size: 20px;
+
+          @include ease;
+          &:hover {
+            color: darken($secondary-color, 50);
+          }
+        }
       }
 
       &:hover {
@@ -143,9 +154,9 @@ main#portfolio {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 24px;
+      font-size: 32px;
       padding: 1rem;
-      font-weight: 500;
+      font-weight: 700;
       background-color: $third-color;
       text-transform: uppercase;
       color: set-text-color($third-color);

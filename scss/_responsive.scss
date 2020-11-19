@@ -39,6 +39,10 @@
         width: 64px;
         height: 64px;
       }
+
+      &.right {
+        display: none;
+      }
     }
 
     &-nav {
@@ -76,6 +80,7 @@
   //Menu Overlay
   .menu {
     width: 300px;
+    height: 100%;
   }
 
   // Main
@@ -145,6 +150,11 @@
         "port5";
 
       grid-template-columns: repeat(1, 1fr);
+
+      .port.port5 {
+        padding: 1rem;
+        font-size: 24px;
+      }
     }
   }
 }
