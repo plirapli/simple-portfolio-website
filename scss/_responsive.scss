@@ -3,77 +3,77 @@
   // Menu Overlay
   header {
     position: static;
-  }
-
-  .menu-btn {
-    display: none;
-  }
-
-  .menu {
-    position: static;
     width: 100%;
     background-color: rgba($primary-color, 0.7);
-    visibility: visible;
-    transform: translateX(0);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 6rem;
-    @include ease();
-    // border: 2px solid red;
+    justify-content: center;
 
-    &-brand,
-    &-nav {
-      margin: 0;
-      padding: 0;
+    .menu-btn {
+      display: none;
+    }
+
+    // Menu
+    .menu {
+      position: static;
+      width: 996px;
+      visibility: visible;
+      transform: translateX(0);
       display: flex;
       flex-direction: row;
-      overflow: hidden;
-    }
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      margin: 0 6rem;
+      @include ease();
+      // border: 2px solid red;
 
-    &-brand {
-      .img-profile {
-        margin-top: 0;
-        border: 3px solid $third-color;
-        width: 64px;
-        height: 64px;
+      &-brand,
+      &-nav {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
       }
 
-      &.right {
-        display: none;
+      &-brand {
+        .img-profile {
+          margin-top: 0;
+          border: 3px solid $third-color;
+          width: 64px;
+          height: 64px;
+        }
       }
-    }
 
-    &-nav {
-      // height: 36px;
-      list-style: none;
-      display: flex;
-      gap: 24px;
+      &-nav {
+        display: flex;
+        gap: 24px;
 
-      .nav-item {
-        @include ease;
-        border-radius: 4px;
-        transform: translateX(0px);
+        .nav-item {
+          @include ease;
+          border-radius: 4px;
+          transform: translateX(0px);
 
-        a {
-          padding: 10px 16px;
-          font-size: 14px;
+          a {
+            padding: 10px 16px;
+            font-size: 14px;
 
-          i {
-            font-size: 0;
-            margin-right: 0;
+            i {
+              font-size: 0;
+              margin-right: 0;
+            }
           }
         }
       }
-    }
 
-    &-hidden {
-      display: inline-block;
-      visibility: hidden;
+      &-hidden {
+        display: inline-block;
+        visibility: hidden;
+      }
     }
   }
 }
+
+///////////////////////////////////////////////
 
 // Tablets
 @include mediaMd {
@@ -81,36 +81,62 @@
   .menu {
     width: 300px;
     height: 100%;
+    background-color: darken($primary-color, 4);
   }
 
   // Main
   main {
+    min-height: calc(100vh - 64px);
     padding: 4rem 4rem 6rem;
-  }
 
-  // Portfolio Page
-  main#portfolio {
-    .portfolio {
-      grid-template-areas:
-        "port1 port2"
-        "port3 port4"
-        "port5 port5";
+    &#home {
+      .image-profile {
+        display: inline;
+        margin-top: 3rem;
+        width: 240px;
 
-      grid-template-columns: repeat(2, 1fr);
+        img {
+          width: 100%;
+          border-radius: 50%;
+          border: 8px solid $third-color;
+        }
+      }
 
-      .port.port5 {
-        padding: 3rem;
+      h1 {
+        margin-top: 2rem;
+      }
+    }
+
+    // Portfolio Page
+    &#portfolio {
+      .portfolio {
+        grid-template-areas:
+          "port1 port2"
+          "port3 port4"
+          "port5 port5";
+
+        grid-template-columns: repeat(2, 1fr);
+
+        .port {
+          max-width: 100%;
+
+          &.port5 {
+            padding: 3rem;
+            max-width: 100%;
+          }
+        }
       }
     }
   }
 }
 
+///////////////////////////////////////////////////
+
 // Smartphones
 @include mediaSm {
   // Initial
   h1,
-  h2,
-  h3 {
+  h2 {
     &.lg-heading {
       font-size: 3rem;
     }
@@ -127,33 +153,39 @@
 
   // Main
   main {
-    padding: 36px;
-  }
+    padding: 3rem 36px;
 
-  // Home Page
-  main#home h1 {
-    margin-top: 12vh;
-  }
+    // Home Page
+    &#home {
+      .image-profile {
+        width: 200px;
+      }
 
-  // Portfolio Page
-  main#portfolio {
-    .lg-heading {
-      margin-top: 4vh;
-      margin-bottom: 1rem;
+      h1 {
+        margin-top: 2rem;
+      }
     }
-    .portfolio {
-      grid-template-areas:
-        "port1"
-        "port2"
-        "port3"
-        "port4"
-        "port5";
 
-      grid-template-columns: repeat(1, 1fr);
+    // Portfolio Page
+    &#portfolio {
+      .lg-heading {
+        margin-top: 4vh;
+        margin-bottom: 1rem;
+      }
+      .portfolio {
+        grid-template-areas:
+          "port1"
+          "port2"
+          "port3"
+          "port4"
+          "port5";
 
-      .port.port5 {
-        padding: 1rem;
-        font-size: 24px;
+        grid-template-columns: repeat(1, 1fr);
+
+        .port.port5 {
+          padding: 1rem;
+          font-size: 24px;
+        }
       }
     }
   }
