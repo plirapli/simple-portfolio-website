@@ -185,6 +185,82 @@ main#portfolio {
 }
 
 main#about {
+  .image-profile {
+    max-width: 160px;
+
+    img {
+      @include image-profile();
+    }
+  }
+
+  .about {
+    width: 100%;
+    max-width: 996px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 2px solid red;
+
+    .education,
+    .experience,
+    .skill-lang {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+      text-transform: capitalize;
+      // padding: 12px;
+    }
+
+    .education,
+    .experience {
+      flex-direction: column;
+
+      .header {
+        width: 100%;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 16px;
+        background-color: darken($primary-color, 4);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 16px 32px;
+        // border: 2px solid salmon;
+        text-transform: capitalize;
+
+        .title {
+          display: flex;
+          // border: 2px solid red;
+          flex-direction: column;
+          justify-content: center;
+
+          h1 {
+            font-size: 12px;
+            font-weight: 700;
+          }
+
+          p {
+            margin: 0;
+            font-weight: 400;
+          }
+        }
+
+        i {
+          font-size: 1.2rem;
+          padding: 16px;
+          background-color: darken($color: $primary-color, $amount: 4);
+          color: $third-color;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
 }
 
 .footer {

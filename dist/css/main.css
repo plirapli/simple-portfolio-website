@@ -258,6 +258,78 @@ main#portfolio .portfolio .port5:hover {
   color: white;
 }
 
+main#about .image-profile {
+  max-width: 160px;
+}
+main#about .image-profile img {
+  width: 100%;
+  border-radius: 50%;
+  border: 8px solid #90c3c3;
+}
+main#about .about {
+  width: 100%;
+  max-width: 996px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 2px solid red;
+}
+main#about .about .education,
+main#about .about .experience,
+main#about .about .skill-lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  text-transform: capitalize;
+}
+main#about .about .education,
+main#about .about .experience {
+  flex-direction: column;
+}
+main#about .about .education .header,
+main#about .about .experience .header {
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 16px;
+  background-color: #194243;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+main#about .about .education .content,
+main#about .about .experience .content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  text-transform: capitalize;
+}
+main#about .about .education .content .title,
+main#about .about .experience .content .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main#about .about .education .content .title h1,
+main#about .about .experience .content .title h1 {
+  font-size: 12px;
+  font-weight: 700;
+}
+main#about .about .education .content .title p,
+main#about .about .experience .content .title p {
+  margin: 0;
+  font-weight: 400;
+}
+main#about .about .education .content i,
+main#about .about .experience .content i {
+  font-size: 1.2rem;
+  padding: 16px;
+  background-color: #194243;
+  color: #90c3c3;
+  border-radius: 12px;
+}
+
 .footer {
   padding: 20px 0px;
   font-size: 1rem;

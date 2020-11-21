@@ -96,9 +96,7 @@
         width: 240px;
 
         img {
-          width: 100%;
-          border-radius: 50%;
-          border: 8px solid $third-color;
+          @include image-profile();
         }
       }
 
