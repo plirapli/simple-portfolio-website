@@ -125,6 +125,52 @@
         }
       }
     }
+
+    // About Page
+    &#about {
+      .image-profile {
+        width: 120px;
+      }
+
+      .about {
+        .education,
+        .experience {
+          .header {
+            font-size: 1.2rem;
+          }
+
+          .content {
+            .title {
+              h2 {
+                font-size: 1rem;
+              }
+
+              p {
+                font-size: 12px;
+              }
+            }
+
+            i {
+              padding: 12px;
+              font-size: 1rem;
+            }
+          }
+        }
+
+        .skill-lang {
+          flex-wrap: wrap;
+
+          .skill,
+          .lang {
+            width: 100%;
+
+            .content {
+              padding: 16px 32px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -183,6 +229,23 @@
         .port.port5 {
           padding: 1rem;
           font-size: 24px;
+        }
+      }
+    }
+
+    &#about {
+      .image-profile {
+        width: 120px;
+      }
+
+      .about {
+        .education,
+        .experience,
+        .skill-lang > .skill,
+        .skill-lang > .lang {
+          .content {
+            padding: 16px 0;
+          }
         }
       }
     }
