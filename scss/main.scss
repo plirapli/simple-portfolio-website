@@ -199,7 +199,7 @@ main#about {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    border: 2px solid red;
+    // border: 2px solid red;
 
     .education,
     .experience,
@@ -207,7 +207,7 @@ main#about {
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 2px solid black;
+      // border: 2px solid black;
       text-transform: capitalize;
       // padding: 12px;
     }
@@ -223,6 +223,7 @@ main#about {
         padding: 16px;
         background-color: darken($primary-color, 4);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
       }
 
       .content {
@@ -257,6 +258,52 @@ main#about {
           background-color: darken($color: $primary-color, $amount: 4);
           color: $third-color;
           border-radius: 12px;
+        }
+      }
+    }
+
+    .skill-lang {
+      align-items: flex-start;
+      gap: 24px;
+
+      .skill,
+      .lang {
+        // border: 2px solid red;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .header {
+          // border: 2px solid orange;
+          display: flex;
+          gap: 12px;
+          align-items: center;
+          width: 100%;
+          font-weight: 700;
+          font-size: 1.2rem;
+          padding: 16px;
+          background-color: darken($primary-color, 4);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+          border-radius: 10px;
+        }
+
+        .content {
+          // border: 2px solid white;
+          width: 100%;
+          padding: 16px 42px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          i {
+            font-size: 1rem;
+            padding: 12px;
+            background-color: darken($color: $primary-color, $amount: 4);
+            color: $third-color;
+            border-radius: 12px;
+          }
         }
       }
     }

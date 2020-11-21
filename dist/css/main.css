@@ -272,7 +272,6 @@ main#about .about {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 2px solid red;
 }
 main#about .about .education,
 main#about .about .experience,
@@ -280,7 +279,6 @@ main#about .about .skill-lang {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
   text-transform: capitalize;
 }
 main#about .about .education,
@@ -295,6 +293,7 @@ main#about .about .experience .header {
   padding: 16px;
   background-color: #194243;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 main#about .about .education .content,
 main#about .about .experience .content {
@@ -325,6 +324,47 @@ main#about .about .education .content i,
 main#about .about .experience .content i {
   font-size: 1.2rem;
   padding: 16px;
+  background-color: #194243;
+  color: #90c3c3;
+  border-radius: 12px;
+}
+main#about .about .skill-lang {
+  align-items: flex-start;
+  gap: 24px;
+}
+main#about .about .skill-lang .skill,
+main#about .about .skill-lang .lang {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main#about .about .skill-lang .skill .header,
+main#about .about .skill-lang .lang .header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 16px;
+  background-color: #194243;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+main#about .about .skill-lang .skill .content,
+main#about .about .skill-lang .lang .content {
+  width: 100%;
+  padding: 16px 42px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+main#about .about .skill-lang .skill .content i,
+main#about .about .skill-lang .lang .content i {
+  font-size: 1rem;
+  padding: 12px;
   background-color: #194243;
   color: #90c3c3;
   border-radius: 12px;
