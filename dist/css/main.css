@@ -95,22 +95,6 @@ body {
   margin: 0;
   font-family: "Montserrat", arial, sans-serif;
 }
-body#bg-img {
-  background: url("../img/bg-home.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-}
-body#bg-img::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;
-  background-color: rgba(31, 81, 82, 0.9);
-}
 
 h1,
 h2 {

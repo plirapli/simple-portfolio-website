@@ -6,7 +6,7 @@
 }
 
 body {
-  @include background;
+  // @include background;
   background-color: rgba($primary-color, $bg-opacity);
   color: set-text-color($primary-color);
   margin: 0;
