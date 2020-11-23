@@ -39,9 +39,3 @@ for (let i = 0; i < aboutHeader.length; i++) {
     aboutHeader[i].nextElementSibling.classList.toggle('show');
   });
 }
-
-
-function dropdownAbout() {
-  // aboutHeader.classList.toggle('show');
-  // aboutContent.forEach(e => e.classList.toggle('show'));
-}

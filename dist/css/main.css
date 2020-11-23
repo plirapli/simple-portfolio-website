@@ -284,13 +284,13 @@ main#portfolio .portfolio .port5:hover {
 }
 
 main#about .image-profile {
-  max-width: 160px;
+  max-width: 140px;
 }
 
 main#about .image-profile img {
   width: 100%;
   border-radius: 50%;
-  border: 8px solid #90c3c3;
+  border: 6px solid #90c3c3;
 }
 
 main#about .about {
@@ -320,12 +320,11 @@ main#about .about .education .header,
 main#about .about .experience .header {
   width: 100%;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 16px 24px;
   background-color: #194243;
   border-radius: 10px;
   display: flex;
-  z-index: 2;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
@@ -352,16 +351,16 @@ main#about .about .experience .content-page {
   width: 100%;
   padding: 16px 24px;
   position: relative;
-  display: none;
-  gap: 12px;
+  gap: 16px;
   overflow: hidden;
+  display: none;
+  flex-direction: column;
   transition: all 300ms ease;
 }
 
 main#about .about .education .content-page.show,
 main#about .about .experience .content-page.show {
   display: flex;
-  flex-direction: column;
 }
 
 main#about .about .education .content-page .content,
@@ -384,17 +383,19 @@ main#about .about .experience .content-page .content .title {
 main#about .about .education .content-page .content .title h2,
 main#about .about .experience .content-page .content .title h2 {
   font-weight: 700;
+  font-size: 1rem;
 }
 
 main#about .about .education .content-page .content .title p,
 main#about .about .experience .content-page .content .title p {
   margin: 0;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 
 main#about .about .education .content-page .content i,
 main#about .about .experience .content-page .content i {
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 12px;
   background-color: #194243;
   color: #90c3c3;
@@ -408,7 +409,7 @@ main#about .about .skill-lang {
 
 main#about .about .skill-lang .skill,
 main#about .about .skill-lang .lang {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -418,7 +419,6 @@ main#about .about .skill-lang .lang {
 main#about .about .skill-lang .skill .header,
 main#about .about .skill-lang .lang .header {
   display: flex;
-  gap: 12px;
   align-items: baseline;
   justify-content: space-between;
   width: 100%;
@@ -431,23 +431,49 @@ main#about .about .skill-lang .lang .header {
   transition: all 300ms ease;
 }
 
+main#about .about .skill-lang .skill .header i,
+main#about .about .skill-lang .lang .header i {
+  transition: all 300ms ease;
+}
+
+main#about .about .skill-lang .skill .header.show i,
+main#about .about .skill-lang .lang .header.show i {
+  transform: rotate(180deg);
+}
+
 main#about .about .skill-lang .skill .header:hover,
 main#about .about .skill-lang .lang .header:hover {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-main#about .about .skill-lang .skill .content,
-main#about .about .skill-lang .lang .content {
+main#about .about .skill-lang .skill .content-page,
+main#about .about .skill-lang .lang .content-page {
   width: 100%;
-  padding: 16px 42px;
+  padding: 16px 24px;
+  position: relative;
+  gap: 14px;
+  overflow: hidden;
+  flex-direction: column;
+  display: none;
+  transition: all 300ms ease;
+}
+
+main#about .about .skill-lang .skill .content-page.show,
+main#about .about .skill-lang .lang .content-page.show {
+  display: flex;
+}
+
+main#about .about .skill-lang .skill .content-page .content,
+main#about .about .skill-lang .lang .content-page .content {
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 12px;
   font-weight: 500;
 }
 
-main#about .about .skill-lang .skill .content i,
-main#about .about .skill-lang .lang .content i {
+main#about .about .skill-lang .skill .content-page .content i,
+main#about .about .skill-lang .lang .content-page .content i {
   font-size: 1rem;
   padding: 12px;
   background-color: #194243;
@@ -551,7 +577,7 @@ main#about .about .skill-lang .lang .content i {
   main#home .image-profile img {
     width: 100%;
     border-radius: 50%;
-    border: 8px solid #90c3c3;
+    border: 6px solid #90c3c3;
   }
   main#home h1 {
     margin-top: 2rem;
@@ -570,33 +596,8 @@ main#about .about .skill-lang .lang .content i {
   main#about .image-profile {
     width: 120px;
   }
-  main#about .about .education .header,
-  main#about .about .experience .header {
-    font-size: 1.2rem;
-  }
-  main#about .about .education .content .title h2,
-  main#about .about .experience .content .title h2 {
-    font-size: 1rem;
-  }
-  main#about .about .education .content .title p,
-  main#about .about .experience .content .title p {
-    font-size: 12px;
-  }
-  main#about .about .education .content i,
-  main#about .about .experience .content i {
-    padding: 12px;
-    font-size: 1rem;
-  }
   main#about .about .skill-lang {
-    flex-wrap: wrap;
-  }
-  main#about .about .skill-lang .skill,
-  main#about .about .skill-lang .lang {
-    width: 100%;
-  }
-  main#about .about .skill-lang .skill .content,
-  main#about .about .skill-lang .lang .content {
-    padding: 16px 32px;
+    flex-direction: column;
   }
 }
 
@@ -634,12 +635,12 @@ main#about .about .skill-lang .lang .content i {
     font-size: 24px;
   }
   main#about .image-profile {
-    width: 120px;
+    width: 100px;
   }
-  main#about .about .education .content,
-  main#about .about .experience .content,
-  main#about .about .skill-lang > .skill .content,
-  main#about .about .skill-lang > .lang .content {
+  main#about .about .education .content-page,
+  main#about .about .experience .content-page,
+  main#about .about .skill-lang > .skill .content-page,
+  main#about .about .skill-lang > .lang .content-page {
     padding: 16px 0;
   }
 }

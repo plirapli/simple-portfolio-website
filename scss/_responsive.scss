@@ -133,41 +133,8 @@
       }
 
       .about {
-        .education,
-        .experience {
-          .header {
-            font-size: 1.2rem;
-          }
-
-          .content {
-            .title {
-              h2 {
-                font-size: 1rem;
-              }
-
-              p {
-                font-size: 12px;
-              }
-            }
-
-            i {
-              padding: 12px;
-              font-size: 1rem;
-            }
-          }
-        }
-
         .skill-lang {
-          flex-wrap: wrap;
-
-          .skill,
-          .lang {
-            width: 100%;
-
-            .content {
-              padding: 16px 32px;
-            }
-          }
+          flex-direction: column;
         }
       }
     }
@@ -233,9 +200,10 @@
       }
     }
 
+    // About Page
     &#about {
       .image-profile {
-        width: 120px;
+        width: 100px;
       }
 
       .about {
@@ -243,7 +211,7 @@
         .experience,
         .skill-lang > .skill,
         .skill-lang > .lang {
-          .content {
+          .content-page {
             padding: 16px 0;
           }
         }

@@ -186,7 +186,7 @@ main#portfolio {
 
 main#about {
   .image-profile {
-    max-width: 160px;
+    max-width: 140px;
 
     img {
       @include image-profile();
@@ -210,7 +210,6 @@ main#about {
       // border: 2px solid black;
       text-transform: capitalize;
       overflow: hidden;
-      // padding: 12px;
     }
 
     .education,
@@ -220,12 +219,11 @@ main#about {
       .header {
         width: 100%;
         font-weight: 700;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         padding: 16px 24px;
         background-color: darken($primary-color, 4);
         border-radius: 10px;
         display: flex;
-        z-index: 2;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
@@ -248,14 +246,14 @@ main#about {
         width: 100%;
         padding: 16px 24px;
         position: relative;
-        display: none;
-        gap: 12px;
+        gap: 16px;
         overflow: hidden;
+        display: none;
+        flex-direction: column;
         @include ease;
 
         &.show {
           display: flex;
-          flex-direction: column;
         }
 
         .content {
@@ -264,7 +262,6 @@ main#about {
           gap: 12px;
           // border: 2px solid salmon;
           text-transform: capitalize;
-          // position: absolute;
           width: 100%;
           @include ease();
 
@@ -276,16 +273,18 @@ main#about {
 
             h2 {
               font-weight: 700;
+              font-size: 1rem;
             }
 
             p {
               margin: 0;
+              font-size: 0.8rem;
               font-weight: 400;
             }
           }
 
           i {
-            font-size: 1.2rem;
+            font-size: 1rem;
             padding: 12px;
             background-color: darken($color: $primary-color, $amount: 4);
             color: $third-color;
@@ -302,16 +301,14 @@ main#about {
       .skill,
       .lang {
         // border: 2px solid red;
-        width: 50%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
         .header {
-          // border: 2px solid orange;
           display: flex;
-          gap: 12px;
           align-items: baseline;
           justify-content: space-between;
           width: 100%;
@@ -321,28 +318,53 @@ main#about {
           background-color: darken($primary-color, 4);
           border-radius: 10px;
           cursor: pointer;
+          // border: 2px solid orange;
           @include ease();
+
+          i {
+            @include ease;
+          }
+
+          &.show {
+            i {
+              transform: rotate(180deg);
+            }
+          }
 
           &:hover {
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
           }
         }
 
-        .content {
-          // border: 2px solid white;
+        .content-page {
           width: 100%;
-          padding: 16px 42px;
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          font-weight: 500;
+          padding: 16px 24px;
+          position: relative;
+          gap: 14px;
+          overflow: hidden;
+          flex-direction: column;
+          display: none;
+          @include ease;
 
-          i {
-            font-size: 1rem;
-            padding: 12px;
-            background-color: darken($color: $primary-color, $amount: 4);
-            color: $third-color;
-            border-radius: 12px;
+          &.show {
+            display: flex;
+          }
+
+          .content {
+            // border: 2px solid white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+
+            i {
+              font-size: 1rem;
+              padding: 12px;
+              background-color: darken($color: $primary-color, $amount: 4);
+              color: $third-color;
+              border-radius: 12px;
+            }
           }
         }
       }
