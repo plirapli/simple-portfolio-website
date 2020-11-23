@@ -1,3 +1,4 @@
+// Navbar
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const menuBrand = document.querySelector(".menu-brand");
@@ -25,4 +26,22 @@ function toggleMenu() {
 
     showMenu = false;
   }
+}
+
+// About Page
+const aboutHeader = document.querySelectorAll("#aboutPage .header");
+
+let showAbout = false;
+
+for (let i = 0; i < aboutHeader.length; i++) {
+  aboutHeader[i].addEventListener("click", () => {
+    aboutHeader[i].classList.toggle('show');
+    aboutHeader[i].nextElementSibling.classList.toggle('show');
+  });
+}
+
+
+function dropdownAbout() {
+  // aboutHeader.classList.toggle('show');
+  // aboutContent.forEach(e => e.classList.toggle('show'));
 }

@@ -198,7 +198,7 @@ main#about {
     max-width: 996px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
     // border: 2px solid red;
 
     .education,
@@ -209,6 +209,7 @@ main#about {
       align-items: center;
       // border: 2px solid black;
       text-transform: capitalize;
+      overflow: hidden;
       // padding: 12px;
     }
 
@@ -220,43 +221,76 @@ main#about {
         width: 100%;
         font-weight: 700;
         font-size: 1.5rem;
-        padding: 16px;
+        padding: 16px 24px;
         background-color: darken($primary-color, 4);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
         border-radius: 10px;
-      }
-
-      .content {
-        width: 100%;
         display: flex;
+        z-index: 2;
+        justify-content: space-between;
         align-items: center;
-        gap: 12px;
-        padding: 16px 32px;
-        // border: 2px solid salmon;
-        text-transform: capitalize;
-
-        .title {
-          display: flex;
-          // border: 2px solid red;
-          flex-direction: column;
-          justify-content: center;
-
-          h2 {
-            font-weight: 700;
-          }
-
-          p {
-            margin: 0;
-            font-weight: 400;
-          }
-        }
+        cursor: pointer;
+        @include ease();
 
         i {
-          font-size: 1.2rem;
-          padding: 16px;
-          background-color: darken($color: $primary-color, $amount: 4);
-          color: $third-color;
-          border-radius: 12px;
+          @include ease;
+        }
+
+        &.show {
+          i {
+            transform: rotate(180deg);
+          }
+        }
+        &:hover {
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+      }
+      .content-page {
+        width: 100%;
+        padding: 16px 24px;
+        position: relative;
+        display: none;
+        gap: 12px;
+        overflow: hidden;
+        @include ease;
+
+        &.show {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .content {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          // border: 2px solid salmon;
+          text-transform: capitalize;
+          // position: absolute;
+          width: 100%;
+          @include ease();
+
+          .title {
+            display: flex;
+            // border: 2px solid red;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+              font-weight: 700;
+            }
+
+            p {
+              margin: 0;
+              font-weight: 400;
+            }
+          }
+
+          i {
+            font-size: 1.2rem;
+            padding: 12px;
+            background-color: darken($color: $primary-color, $amount: 4);
+            color: $third-color;
+            border-radius: 12px;
+          }
         }
       }
     }
@@ -278,14 +312,20 @@ main#about {
           // border: 2px solid orange;
           display: flex;
           gap: 12px;
-          align-items: center;
+          align-items: baseline;
+          justify-content: space-between;
           width: 100%;
           font-weight: 700;
           font-size: 1.2rem;
-          padding: 16px;
+          padding: 16px 24px;
           background-color: darken($primary-color, 4);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
           border-radius: 10px;
+          cursor: pointer;
+          @include ease();
+
+          &:hover {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+          }
         }
 
         .content {
