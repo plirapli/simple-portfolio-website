@@ -5,33 +5,18 @@ const menuBrand = document.querySelector(".menu-brand");
 const menuNav = document.querySelector(".menu-nav");
 const navItem = document.querySelectorAll(".nav-item");
 
-let showMenu = false;
 menuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
-  if (!showMenu) {
-    menuBtn.classList.add("close");
-    menu.classList.add("show");
-    menuBrand.classList.add("show");
-    menuNav.classList.add("show");
-    navItem.forEach((item) => item.classList.add("show"));
-
-    showMenu = true;
-  } else {
-    menuBtn.classList.remove("close");
-    menu.classList.remove("show");
-    menuBrand.classList.remove("show");
-    menuNav.classList.remove("show");
-    navItem.forEach((item) => item.classList.remove("show"));
-
-    showMenu = false;
-  }
+    menuBtn.classList.toggle("close");
+    menu.classList.toggle("show");
+    menuBrand.classList.toggle("show");
+    menuNav.classList.toggle("show");
+    navItem.forEach((item) => item.classList.toggle("show"));
 }
 
 // About Page
 const aboutHeader = document.querySelectorAll("#aboutPage .header");
-
-let showAbout = false;
 
 for (let i = 0; i < aboutHeader.length; i++) {
   aboutHeader[i].addEventListener("click", () => {
