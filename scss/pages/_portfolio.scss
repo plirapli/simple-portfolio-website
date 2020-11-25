@@ -1,0 +1,103 @@
+// Portfolio Page
+main#portfolio {
+  .lg-heading {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio {
+    display: grid;
+    max-width: 996px;
+    grid-template-areas:
+      "port1 port2"
+      "port3 port4"
+      "port5 port5";
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    .port {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px 12px 8px 8px;
+      background-color: rgba($primary-color, 0.7);
+      @include ease;
+
+      img {
+        transform: translateY(48px);
+        width: 70%;
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+        background-size: cover;
+        @include ease;
+
+        &:hover {
+          transform: translateY(24px);
+        }
+      }
+
+      .desc-item {
+        z-index: 2;
+        padding: 12px;
+        width: 100%;
+        height: 100%;
+        background-color: $secondary-color;
+        text-align: center;
+
+        a {
+          h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 0.8rem;
+            font-weight: 500;
+          }
+
+          @include ease;
+          &:hover {
+            color: darken($secondary-color, 50);
+          }
+        }
+      }
+
+      &:hover {
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    .port1 {
+      grid-area: port1;
+    }
+    .port2 {
+      grid-area: port2;
+    }
+    .port3 {
+      grid-area: port3;
+    }
+    .port4 {
+      grid-area: port4;
+    }
+    .port5 {
+      grid-area: port5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      padding: 1rem;
+      font-weight: 700;
+      background-color: $third-color;
+      text-transform: uppercase;
+      color: set-text-color($third-color);
+      border-radius: 12px;
+      cursor: pointer;
+      @include ease;
+
+      &:hover {
+        background-color: darken($third-color, 30);
+        color: set-text-color($primary-color);
+      }
+    }
+  }
+}

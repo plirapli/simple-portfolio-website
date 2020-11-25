@@ -1,0 +1,36 @@
+// Home Page
+main#home {
+  overflow: hidden;
+
+  .image-profile {
+    display: none;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    margin-top: 18vh;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+    padding: 0.5rem 1rem;
+    background-color: $third-color;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  .icon {
+    a {
+      margin-right: 0.8rem;
+      font-size: 1.4rem;
+      @include ease();
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+}

@@ -13,6 +13,11 @@ $bg-opacity: 0.9;
   border: 6px solid $third-color;
 }
 
+// Box Shadow
+@mixin box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 // Color Auto
 @function set-text-color($color) {
   @if (lightness($color) > 50) {
