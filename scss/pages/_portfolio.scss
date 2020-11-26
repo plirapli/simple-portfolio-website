@@ -10,7 +10,9 @@ main#portfolio {
     grid-template-areas:
       "port1 port2"
       "port3 port4"
-      "port5 port5";
+      "port5 port6"
+      "port7 port8"
+      "more more";
 
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -81,9 +83,20 @@ main#portfolio {
     }
     .port5 {
       grid-area: port5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    }
+    .port6 {
+      grid-area: port6;
+    }
+    .port7 {
+      grid-area: port7;
+    }
+    .port8 {
+      grid-area: port8;
+    }
+    .more {
+      display: none;
+      grid-area: more;
+
       font-size: 32px;
       padding: 1rem;
       font-weight: 700;

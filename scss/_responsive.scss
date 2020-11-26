@@ -119,21 +119,34 @@
     // Portfolio Page
     &#portfolio {
       .portfolio {
-        grid-template-areas:
-          "port1 port2"
-          "port3 port4"
-          "port5 port5";
-
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        gap: 24px;
 
         .port {
           max-width: 100%;
 
-          &.port5 {
+          &.port5,
+          &.port6,
+          &.port7,
+          &.port8 {
+            display: none;
+
+            &.show {
+              display: flex;
+            }
+          }
+
+          &.more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -32px;
             padding: 2rem;
             max-width: 100%;
             font-size: 1.2rem;
+
+            &.close {
+              display: none;
+            }
           }
         }
       }
@@ -202,12 +215,17 @@
           "port2"
           "port3"
           "port4"
-          "port5";
+          "port5"
+          "port6"
+          "port7"
+          "port8"
+          "more";
 
         grid-template-columns: repeat(1, 1fr);
 
-        .port.port5 {
-          padding: 1rem;
+        .port.more {
+          margin-top: -72px;
+          padding: 2rem;
           font-size: 24px;
         }
       }

@@ -24,3 +24,21 @@ for (let i = 0; i < aboutHeader.length; i++) {
     aboutHeader[i].nextElementSibling.classList.toggle('show');
   });
 }
+
+const port5 = document.querySelector(".port5");
+const port6 = document.querySelector(".port6");
+const port7 = document.querySelector(".port7");
+const port8 = document.querySelector(".port8");
+const aboutMore = document.querySelector(".more");
+
+aboutMore.addEventListener("click", () => {
+  aboutMore.firstElementChild.innerHTML = 'loading';
+
+  setTimeout(() => {
+    port5.classList.toggle('show');
+    port6.classList.toggle('show');
+    port7.classList.toggle('show');
+    port8.classList.toggle('show');
+    aboutMore.classList.add('close');
+  }, 500)
+})
