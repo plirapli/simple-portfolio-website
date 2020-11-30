@@ -86,6 +86,10 @@ header {
 
         &.active {
           background-color: $third-color;
+
+          &:hover {
+            background-color: $third-color;
+          }
         }
 
         a {
@@ -102,7 +106,7 @@ header {
         }
 
         &:hover {
-          background-color: $third-color;
+          background-color: rgba($color: $third-color, $alpha: 0.2);
         }
       }
     }
